@@ -1,0 +1,222 @@
+body {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: $mainBackground;
+    margin: 96px auto 88px;
+    .container {
+        margin: 0 auto;
+        background: $mainBackground;
+        color: $textColor;
+
+        max-width: 540px;
+        display: grid;
+        grid-template-columns: minmax(327px, auto);
+        grid-template-areas:
+            'top'
+            'display'
+            'containerKeyboard';
+        @media only screen and(max-width:376px) {
+            margin: 0px 24px 0px 24px;
+        }
+        .top {
+            color: $numberColor;
+            display: grid;
+            grid-template-columns: 100px auto 71px;
+            grid-template-rows: 18px 26px;
+            grid-template-areas:
+                'title . themeNumbers'
+                'title theme switchTheme';
+            grid-area: top;
+            color: $textColor;
+            margin-bottom: 32px;
+            .title {
+                grid-area: title;
+                display: flex;
+                align-items: flex-end;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 36px;
+                text-align: center;
+                letter-spacing: -0.533333px;
+                color: white;
+                margin-bottom: 0px;
+                @media only screen and(max-width:376px) {
+                    margin-bottom: 4px;
+                }
+            }
+            .theme {
+                place-self: end;
+                margin-right: 21px;
+                grid-area: theme;
+
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 13px;
+                text-align: center;
+                letter-spacing: 1px;
+
+                color: white;
+                margin-bottom: 5px;
+            }
+            .themeNumbers {
+                grid-area: themeNumbers;
+                place-self: end;
+                width: 71px;
+                display: flex;
+                justify-content: space-evenly;
+                box-sizing: border-box;
+                margin-bottom: 5px;
+                span {
+                    font-family: Spartan;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 13px;
+                }
+            }
+            .switchTheme {
+                grid-area: switchTheme;
+                place-self: end;
+                display: flex;
+                justify-content: space-between;
+                box-sizing: border-box;
+                background: $toggleBackgroundKeypadBackground;
+                width: 70px;
+                padding: 5px;
+                border-radius: 13px;
+                input {
+                    display: flex;
+                    justify-content: space-evenly;
+                    display: none;
+                }
+                label {
+                    cursor: $cursor;
+                }
+                .toggle {
+                    background-color: $equalKeyBackgroundToggle;
+                    color: $equalKeyBackgroundToggle;
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 50%;
+                    opacity: 0;
+                    &:hover {
+                        filter: brightness(1.5);
+                    }
+                }
+                .toggleMove {
+                    opacity: 1;
+                }
+            }
+        }
+        .containerDisplay {
+            grid-area: display;
+            width: 100%;
+
+            .display {
+                background: $screenBackground;
+                color: $textColor;
+                box-sizing: border-box;
+                padding-top: 38px;
+                padding-bottom: 36px;
+                margin-bottom: 32px;
+                padding-right: 32px;
+                margin-top: 0px;
+                width: 100%;
+                border-radius: 10px;
+                overflow: hidden;
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 54px;
+                letter-spacing: -0.8px;
+                text-align: right;
+
+                @media only screen and(max-width:376px) {
+                    padding: 26px 24px 26px 0px;
+                    font-size: 32px;
+                    line-height: 36px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        .containerKeyboard {
+            grid-area: containerKeyboard;
+            background: $toggleBackgroundKeypadBackground;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(60px, 1fr));
+            grid-template-rows: repeat(5, minmax(60px, 1fr));
+            gap: 25px;
+            padding: 32px;
+            justify-content: center;
+            margin-top: 0px;
+            border-radius: 10px;
+            @media only screen and(max-width:376px) {
+                gap: 13px;
+                padding: 24px;
+            }
+            button {
+                font-size: 32px;
+                line-height: 36px;
+                letter-spacing: -0.533333px;
+                cursor: $cursor;
+                font-weight: 700;
+                font-family: Spartan;
+                font-style: normal;
+                font-weight: bold;
+            }
+            .btn {
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                background: $keyBackground;
+                box-shadow: inset 0px -4px 0px $keyShadow;
+                color: $numberColor;
+                &:hover {
+                    background: $keyBackgroundHover;
+                }
+                @media only screen and(max-width:376px) {
+                    font-size: 28px;
+                    line-height: 31px;
+                }
+            }
+            .delReset {
+                background: $delKeyBackground;
+                box-shadow: inset 0px -4px 0px $delKeyShadow;
+                color: white;
+                font-size: 20px;
+                line-height: 22px;
+                letter-spacing: -0.333333px;
+                font-family: Spartan;
+                font-style: normal;
+                font-weight: bold;
+
+                &:hover {
+                    background: $delKeyBackgroundHover;
+                }
+                @media only screen and(max-width:376px) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+            .equal {
+                grid-column: 3 / 5;
+                background: $equalKeyBackgroundToggle;
+                box-shadow: inset 0px -4px 0px $equalKeyShadow;
+                color: $equalColor;
+                font-family: Spartan;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 22px;
+
+                letter-spacing: -0.333333px;
+                &:hover {
+                    background: $equalHover;
+                }
+            }
+            .reset {
+                grid-column: 1 / 3;
+            }
+        }
+    }
+}
