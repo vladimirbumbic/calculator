@@ -1,12 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
     color: white;
     background-color: $mainBackground;
-    margin: 96px auto 81px;
     .container {
         margin: 0 auto;
-        padding: 0 24px;
         background: $mainBackground;
         color: $textColor;
         width: 327px;
@@ -15,15 +19,16 @@ body {
             'top'
             'display'
             'containerKeyboard';
+        margin-top: 24px;
         @media only screen and(min-width:600px) {
-            padding: 0 0;
             width: 540px;
+            margin: 96px auto 88px;
         }
         .top {
             color: $numberColor;
             display: grid;
             grid-template-columns: 100px auto 71px;
-            grid-template-rows: 20px 24px; //
+            grid-template-rows: 20px 24px;
             grid-template-areas:
                 'title . themeNumbers'
                 'title theme switchTheme';
@@ -159,7 +164,7 @@ body {
                 grid-template-rows: repeat(5, minmax(64px, 1fr));
                 gap: 24px;
                 padding: 32px;
-                width: 476px;
+                width: 540px;
             }
             button {
                 font-size: 32px;
