@@ -72,7 +72,7 @@ function updateDisplay() {
     display.textContent =
         Number(calculator.displayValue) <= 99999999999
             ? Number(calculator.displayValue).toLocaleString('en-US', {
-                  max: 10,
+                  maximumFractionDigits: 10,
               })
             : Number(calculator.displayValue).toExponential(4);
 }
