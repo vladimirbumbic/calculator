@@ -8,7 +8,6 @@ body {
         margin: 0 auto;
         background: $mainBackground;
         color: $textColor;
-
         max-width: 540px;
         display: grid;
         grid-template-columns: minmax(327px, auto);
@@ -16,7 +15,7 @@ body {
             'top'
             'display'
             'containerKeyboard';
-        @media only screen and(max-width:376px) {
+        @media only screen and(max-width:600px) {
             margin: 0px 24px 0px 24px;
         }
         .top {
@@ -41,7 +40,7 @@ body {
                 letter-spacing: -0.533333px;
                 color: white;
                 margin-bottom: 0px;
-                @media only screen and(max-width:376px) {
+                @media only screen and(max-width:600px) {
                     margin-bottom: 4px;
                 }
             }
@@ -49,13 +48,11 @@ body {
                 place-self: end;
                 margin-right: 21px;
                 grid-area: theme;
-
                 font-weight: bold;
                 font-size: 12px;
                 line-height: 13px;
                 text-align: center;
                 letter-spacing: 1px;
-
                 color: white;
                 margin-bottom: 5px;
             }
@@ -112,7 +109,9 @@ body {
         .containerDisplay {
             grid-area: display;
             width: 100%;
-
+            @media only screen and(max-width:600px) {
+                padding-right: 24px;
+            }
             .display {
                 background: $screenBackground;
                 color: $textColor;
@@ -130,8 +129,7 @@ body {
                 line-height: 54px;
                 letter-spacing: -0.8px;
                 text-align: right;
-
-                @media only screen and(max-width:376px) {
+                @media only screen and(max-width:600px) {
                     padding: 26px 24px 26px 0px;
                     font-size: 32px;
                     line-height: 36px;
@@ -143,16 +141,18 @@ body {
             grid-area: containerKeyboard;
             background: $toggleBackgroundKeypadBackground;
             display: grid;
-            grid-template-columns: repeat(4, minmax(60px, 1fr));
-            grid-template-rows: repeat(5, minmax(60px, 1fr));
+            grid-template-columns: repeat(4, minmax(101px, 1fr));
+            grid-template-rows: repeat(5, minmax(64px, 1fr));
             gap: 25px;
             padding: 32px;
             justify-content: center;
             margin-top: 0px;
             border-radius: 10px;
-            @media only screen and(max-width:376px) {
+            @media only screen and(max-width:600px) {
                 gap: 13px;
                 padding: 24px;
+                grid-template-columns: repeat(4, minmax(60px, 1fr));
+                grid-template-rows: repeat(5, minmax(64px, 1fr));
             }
             button {
                 font-size: 32px;
@@ -174,7 +174,7 @@ body {
                 &:hover {
                     background: $keyBackgroundHover;
                 }
-                @media only screen and(max-width:376px) {
+                @media only screen and(max-width:600px) {
                     font-size: 28px;
                     line-height: 31px;
                 }
@@ -193,7 +193,7 @@ body {
                 &:hover {
                     background: $delKeyBackgroundHover;
                 }
-                @media only screen and(max-width:376px) {
+                @media only screen and(max-width:600px) {
                     font-size: 16px;
                     line-height: 18px;
                 }

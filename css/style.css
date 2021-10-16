@@ -82,7 +82,7 @@ body .container {
         'containerKeyboard';
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) {
     body .container {
         margin: 0px 24px 0px 24px;
     }
@@ -126,7 +126,7 @@ body .container .top .title {
     margin-bottom: 0px;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) {
     body .container .top .title {
         margin-bottom: 4px;
     }
@@ -230,6 +230,12 @@ body .container .containerDisplay {
     width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    body .container .containerDisplay {
+        padding-right: 24px;
+    }
+}
+
 body .container .containerDisplay .display {
     background: var(--screen-background);
     color: var(--text-color);
@@ -250,7 +256,7 @@ body .container .containerDisplay .display {
     text-align: right;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) {
     body .container .containerDisplay .display {
         padding: 26px 24px 26px 0px;
         font-size: 32px;
@@ -266,10 +272,10 @@ body .container .containerKeyboard {
     background: var(--toogle-background-keypad-background);
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(60px, 1fr)) [4];
-    grid-template-columns: repeat(4, minmax(60px, 1fr));
-    -ms-grid-rows: (minmax(60px, 1fr)) [5];
-    grid-template-rows: repeat(5, minmax(60px, 1fr));
+    -ms-grid-columns: (minmax(101px, 1fr)) [4];
+    grid-template-columns: repeat(4, minmax(101px, 1fr));
+    -ms-grid-rows: (minmax(64px, 1fr)) [5];
+    grid-template-rows: repeat(5, minmax(64px, 1fr));
     gap: 25px;
     padding: 32px;
     -webkit-box-pack: center;
@@ -279,10 +285,14 @@ body .container .containerKeyboard {
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) {
     body .container .containerKeyboard {
         gap: 13px;
         padding: 24px;
+        -ms-grid-columns: (minmax(60px, 1fr)) [4];
+        grid-template-columns: repeat(4, minmax(60px, 1fr));
+        -ms-grid-rows: (minmax(64px, 1fr)) [5];
+        grid-template-rows: repeat(5, minmax(64px, 1fr));
     }
 }
 
@@ -311,7 +321,7 @@ body .container .containerKeyboard .btn:hover {
     background: var(--key-background-hover);
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) {
     body .container .containerKeyboard .btn {
         font-size: 28px;
         line-height: 31px;
@@ -335,7 +345,7 @@ body .container .containerKeyboard .delReset:hover {
     background: var(--del-key-background-hover);
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 600px) {
     body .container .containerKeyboard .delReset {
         font-size: 16px;
         line-height: 18px;
