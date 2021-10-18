@@ -1,0 +1,77 @@
+html[data-theme='theme1'] {
+    --main-background: hsl(222, 26%, 31%);
+    --toogle-background-keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    --text-color: hsl(0, 0, 100%);
+    --del-key-background: hsl(225, 21%, 49%);
+    --del-key-background-hover: #a2b2e1;
+    --del-key-shadow: hsl(224, 28%, 35%);
+    --equal-key-background-toggle: hsl(6, 63%, 50%);
+    --equal-hover: #f96b5b;
+    --equal-key-shadow: hsl(6, 70%, 34%);
+    --key-background: hsl(30, 25%, 89%);
+    --key-background-hover: #fff;
+    --key-shadow: hsl(28, 16%, 65%);
+    --number-color: hsl(221, 14%, 31%);
+    --text-secondary-color: #fff;
+    --text-function-key-color: #fff;
+    --equal-color: #fff;
+}
+
+html[data-theme='theme2'] {
+    --main-background: hsl(0, 0%, 90%);
+    --toogle-background-keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    --text-color: hsl(60, 10%, 19%);
+    --del-key-background: hsl(185, 42%, 37%);
+    --del-key-background-hover: #62b5bc;
+    --del-key-shadow: hsl(185, 58%, 25%);
+    --equal-key-background-toggle: hsl(25, 98%, 40%);
+    --equal-hover: #ff8a38;
+    --equal-key-shadow: hsl(25, 99%, 27%);
+    --key-background: hsl(45, 7%, 89%);
+    --key-background-hover: #fff;
+    --key-shadow: hsl(35, 11%, 61%);
+    --number-color: hsl(60, 10%, 19%);
+    --text-secondary-color: hsl(0, 0, 100%);
+    --text-function-key-color: #fff;
+    --equal-color: #fff;
+}
+
+html[data-theme='theme3'] {
+    --main-background: hsl(268, 75%, 9%);
+    --toogle-background-keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    --text-color: hsl(52, 100%, 62%);
+    --del-key-background: hsl(281, 89%, 26%);
+    --del-key-background-hover: #8631af;
+    --del-key-shadow: hsl(285, 91%, 52%);
+    --equal-key-background-toggle: hsl(176, 100%, 44%);
+    --equal-hover: #93fff8;
+    --equal-key-shadow: hsl(177, 92%, 70%);
+    --key-background: hsl(268, 47%, 21%);
+    --key-background-hover: #6c34ac;
+    --key-shadow: hsl(290, 70%, 36%);
+    --number-color: hsl(52, 100%, 62%);
+    --text-secondary-color: hsl(198, 20%, 13%);
+    --text-white-color: #fff;
+    --text-function-key-color: #fff;
+    --equal-color: #000;
+}
+
+$mainBackground: var(--main-background);
+$toggleBackgroundKeypadBackground: var(--toogle-background-keypad-background);
+$screenBackground: var(--screen-background);
+$textColor: var(--text-color);
+$delKeyBackground: var(--del-key-background);
+$delKeyBackgroundHover: var(--del-key-background-hover);
+$delKeyShadow: var(--del-key-shadow);
+$equalKeyBackgroundToggle: var(--equal-key-background-toggle);
+$equalHover: var(--equal-hover);
+$equalKeyShadow: var(--equal-key-shadow);
+$keyBackground: var(--key-background);
+$keyBackgroundHover: var(--key-background-hover);
+$keyShadow: var(--key-shadow);
+$numberColor: var(--number-color);
+$equalColor: var(--equal-color);
+$cursor: url('/images/pointer.png'), pointer;

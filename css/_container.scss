@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: $mainBackground;
+    .container {
+        margin: 0 auto;
+        background: $mainBackground;
+        color: $textColor;
+        width: 327px;
+        display: grid;
+        grid-template-areas:
+            'top'
+            'display'
+            'containerKeyboard';
+        margin-top: 24px;
+        @media only screen and(min-width:600px) {
+            width: 540px;
+            margin: 96px auto 88px;
+        }
+        .top {
+            color: $numberColor;
+            display: grid;
+            grid-template-columns: 100px auto 71px;
+            grid-template-rows: 20px 24px;
+            grid-template-areas:
+                'title . themeNumbers'
+                'title theme switchTheme';
+            grid-area: top;
+            color: $textColor;
+            @media only screen and(min-width:600px) {
+                width: 540px;
+            }
+            .title {
+                grid-area: title;
+                display: flex;
+                align-items: flex-end;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 36px;
+                text-align: center;
+                letter-spacing: -0.533333px;
+                color: $textColor;
+                margin-bottom: 4px;
+                @media only screen and(min-width:600px) {
+                    margin-bottom: 0px;
+                }
+            }
+            .theme {
+                place-self: end;
+                margin-right: 21px;
+                grid-area: theme;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 13px;
+                text-align: center;
+                letter-spacing: 1px;
+                color: $textColor;
+                margin-bottom: 5px;
+            }
+            .themeNumbers {
+                grid-area: themeNumbers;
+                place-self: end;
+                width: 71px;
+                display: flex;
+                justify-content: space-evenly;
+                box-sizing: border-box;
+                margin-bottom: 5px;
+                span {
+                    font-family: Spartan;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 13px;
+                }
+            }
+            .switchTheme {
+                grid-area: switchTheme;
+                place-self: end;
+                display: flex;
+                justify-content: space-between;
+                box-sizing: border-box;
+                background: $toggleBackgroundKeypadBackground;
+                width: 71px;
+                padding: 5px;
+                border-radius: 13px;
+                input {
+                    display: flex;
+                    justify-content: space-evenly;
+                    display: none;
+                }
+                label {
+                    cursor: $cursor;
+                }
+                .toggle {
+                    background-color: $equalKeyBackgroundToggle;
+                    color: $equalKeyBackgroundToggle;
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 50%;
+                    opacity: 0;
+                    &:hover {
+                        filter: brightness(1.5);
+                    }
+                }
+                .toggleMove {
+                    opacity: 1;
+                }
+            }
+        }
+        .containerDisplay {
+            grid-area: display;
+            @media only screen and(min-width:600px) {
+                width: 540px;
+            }
+            .display {
+                margin-top: 32px;
+                margin-bottom: 24px;
+                background: $screenBackground;
+                color: $textColor;
+                box-sizing: border-box;
+                padding-top: 26px;
+                padding-bottom: 26px;
+                padding-right: 24px;
+                border-radius: 10px;
+                overflow: hidden;
+                font-family: Spartan;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 36px;
+                text-align: right;
+                letter-spacing: -0.533333px;
+                @media only screen and(min-width:600px) {
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 54px;
+                    letter-spacing: -0.8px;
+                    padding-top: 38px;
+                    padding-bottom: 36px;
+                    padding-right: 32px;
+                    margin-bottom: 32px;
+                }
+            }
+        }
+        .containerKeyboard {
+            grid-area: containerKeyboard;
+            background: $toggleBackgroundKeypadBackground;
+            display: grid;
+            justify-content: center;
+            border-radius: 10px;
+            gap: 13px;
+            padding: 24px;
+            grid-template-columns: repeat(4, minmax(60px, 1fr));
+            grid-template-rows: repeat(5, minmax(64px, 1fr));
+            @media only screen and(min-width:600px) {
+                grid-template-columns: repeat(4, minmax(101px, 1fr));
+                grid-template-rows: repeat(5, minmax(64px, 1fr));
+                gap: 24px;
+                padding: 32px;
+                width: 540px;
+            }
+            button {
+                font-size: 32px;
+                line-height: 36px;
+                letter-spacing: -0.533333px;
+                cursor: $cursor;
+                font-weight: 700;
+                font-family: Spartan;
+                font-style: normal;
+                font-weight: bold;
+            }
+            .btn {
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                font-size: 28px;
+                line-height: 31px;
+                background: $keyBackground;
+                box-shadow: inset 0px -4px 0px $keyShadow;
+                color: $numberColor;
+                &:hover {
+                    background: $keyBackgroundHover;
+                }
+                @media only screen and(min-width:600px) {
+                    font-family: Spartan;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 32px;
+                    line-height: 36px;
+                    letter-spacing: -0.533333px;
+                }
+            }
+            .delReset {
+                background: $delKeyBackground;
+                box-shadow: inset 0px -4px 0px $delKeyShadow;
+                color: white;
+                font-size: 16px;
+                line-height: 18px;
+                letter-spacing: -0.333333px;
+                font-family: Spartan;
+                font-style: normal;
+                font-weight: bold;
+                &:hover {
+                    background: $delKeyBackgroundHover;
+                }
+                @media only screen and(min-width:600px) {
+                    font-family: Spartan;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 22px;
+                    letter-spacing: -0.333333px;
+                }
+            }
+            .equal {
+                grid-column: 3 / 5;
+                background: $equalKeyBackgroundToggle;
+                box-shadow: inset 0px -4px 0px $equalKeyShadow;
+                color: $equalColor;
+                font-family: Spartan;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 22px;
+                letter-spacing: -0.333333px;
+                &:hover {
+                    background: $equalHover;
+                }
+            }
+            .reset {
+                grid-column: 1 / 3;
+            }
+        }
+    }
+}
